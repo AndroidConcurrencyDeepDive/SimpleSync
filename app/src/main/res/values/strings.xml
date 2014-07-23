@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SimpleSync</string>
+
+    <string name="account_type">net.callmeike.android.simplesync.ACCOUNT</string>
+
+    <string name="action_notify">notify</string>
+    <string name="action_force">force</string>
+
+    <string name="test">Wa-pa-pa-pa-pa-pa-pow!\nWa-pa-pa-pa-pa-pa-pow!\nWa-pa-pa-pa-pa-pa-pow!</string>
+    <string name="server_uri">http://callmeike.net</string>
+</resources>

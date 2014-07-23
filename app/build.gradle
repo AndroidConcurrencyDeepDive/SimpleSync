@@ -1,0 +1,51 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId 'net.callmeike.android.simplesync'
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    dexOptions {
+        dexInProcess true
+    }
+}
+
+dependencies {
+    compile 'com.google.dagger:dagger:2.0'
+    provided 'javax.annotation:jsr250-api:1.0'
+    apt 'com.google.dagger:dagger-compiler:2.0.1'
+
+    compile 'com.android.support:appcompat-v7:23.1.1'
+
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile "com.github.aurae.retrofit:converter-logansquare:1.1.0"
+
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.+'
+}
